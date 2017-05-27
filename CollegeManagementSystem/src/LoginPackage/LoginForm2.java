@@ -34,13 +34,9 @@ import Methods.AllMethod;
 import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
 
 
-
-
-
-
-public class LoginForm2
-  extends JFrame
+public class LoginForm2 extends JFrame
 {
+	
   private JPanel contentPane;
   private JTextField usernameField;
   private JPasswordField passwordField;
@@ -67,6 +63,7 @@ public class LoginForm2
 
   public LoginForm2()
   {
+	  // this is logiform2 constructor
     function = new AllMethod();
     pref = Preferences.userRoot().node("RememberMe");
     try {
