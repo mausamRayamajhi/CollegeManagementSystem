@@ -138,14 +138,6 @@ public class MainFrame {
 		gbc_lblTeachers.gridx = 0;
 		gbc_lblTeachers.gridy = 3;
 		panel_1.add(lblTeachers, gbc_lblTeachers);
-		
-		///HTMl tag here
-		JLabel lblNewLabel = new JLabel();
-		lblNewLabel.setText("<HTML>Mausam:<Br></HTMl>");
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.gridx = 0;
-		gbc_lblNewLabel.gridy = 4;
-		panel_1.add(lblNewLabel, gbc_lblNewLabel);
 	}
 
 }
