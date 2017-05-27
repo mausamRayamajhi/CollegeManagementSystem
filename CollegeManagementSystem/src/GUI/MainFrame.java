@@ -8,6 +8,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -17,6 +19,8 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 public class MainFrame {
 
@@ -58,7 +62,7 @@ public class MainFrame {
 		frmCollegeManagementSystem.setTitle("College Management System");
 		frmCollegeManagementSystem
 				.setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrame.class.getResource("/Icons/cms_icon.png")));
-		frmCollegeManagementSystem.setBounds(100, 100, 828, 388);
+		frmCollegeManagementSystem.setBounds(100, 100, 828, 470);
 		frmCollegeManagementSystem.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JLabel label = new JLabel("");
@@ -89,6 +93,7 @@ public class MainFrame {
 		panel_1.setLayout(gbl_panel_1);
 
 		JLabel lblAtten = new JLabel("OVERVIEW");
+		lblAtten.setBorder(new EmptyBorder(10, 10, 10, 10));
 		lblAtten.setIconTextGap(13);
 		lblAtten.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Home_16px.png")));
 		lblAtten.setHorizontalAlignment(SwingConstants.LEFT);
@@ -100,8 +105,18 @@ public class MainFrame {
 		gbc_lblAtten.gridx = 0;
 		gbc_lblAtten.gridy = 0;
 		panel_1.add(lblAtten, gbc_lblAtten);
+		
+		lblAtten.addMouseListener(new MouseAdapter() {
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				
+			}
+			
+		});
 
 		JLabel lblAttendence = new JLabel("ATTENDENCE");
+		lblAttendence.setBorder(new EmptyBorder(10, 10, 10, 10));
 		lblAttendence.setIconTextGap(13);
 		lblAttendence.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Sheet of Paper_16px_1.png")));
 		lblAttendence.setHorizontalAlignment(SwingConstants.LEFT);
@@ -114,6 +129,7 @@ public class MainFrame {
 		panel_1.add(lblAttendence, gbc_lblAttendence);
 
 		JLabel lblStudents = new JLabel("STUDENTS");
+		lblStudents.setBorder(new EmptyBorder(10, 10, 10, 10));
 		lblStudents.setIconTextGap(13);
 		lblStudents.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Student Male_16px.png")));
 		lblStudents.setHorizontalAlignment(SwingConstants.LEFT);
@@ -127,6 +143,7 @@ public class MainFrame {
 		panel_1.add(lblStudents, gbc_lblStudents);
 		
 		JLabel lblTeachers = new JLabel("TEACHERS");
+		lblTeachers.setBorder(new EmptyBorder(10, 10, 10, 10));
 		lblTeachers.setIconTextGap(13);
 		lblTeachers.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Singing Teacher_16px.png")));
 		lblTeachers.setHorizontalAlignment(SwingConstants.LEFT);
