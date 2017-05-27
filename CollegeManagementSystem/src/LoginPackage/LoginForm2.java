@@ -64,6 +64,7 @@ public class LoginForm2 extends JFrame
   public LoginForm2()
   {
 	//mausam
+	  // this is constructor shrawan
     function = new AllMethod();
     pref = Preferences.userRoot().node("RememberMe");
     try {
