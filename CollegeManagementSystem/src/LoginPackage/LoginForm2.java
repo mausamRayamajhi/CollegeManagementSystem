@@ -72,8 +72,8 @@ public class LoginForm2 extends JFrame
     }
     catch (Exception localException) {}
     
-    setIconImage(Toolkit.getDefaultToolkit()
-      .getImage("E:\\eclipse workspace\\CollegeManagementSystem\\src\\Icons\\staff16.png"));
+    setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/staff16.png")));
+    
     setResizable(false);
     setTitle("Login");
     setDefaultCloseOperation(3);
@@ -85,7 +85,7 @@ public class LoginForm2 extends JFrame
     
     JLabel label = new JLabel("");
     label.setBorder(null);
-    label.setIcon(new ImageIcon("E:\\eclipse workspace\\CollegeManagementSystem\\src\\Icons\\001.jpg"));
+    label.setIcon(new ImageIcon(getClass().getResource("/Icons/001.jpg")));
     contentPane.add(label, "North");
     
     JPanel panel = new JPanel();
@@ -139,7 +139,7 @@ public class LoginForm2 extends JFrame
       
 
     });
-    btnLogin.setIcon(new ImageIcon("E:\\eclipse workspace\\CollegeManagementSystem\\src\\Icons\\log.png"));
+    btnLogin.setIcon(new ImageIcon(getClass().getResource("/Icons/log.png")));
     btnLogin.setBounds(275, 158, 115, 35);
     panel.add(btnLogin);
     
