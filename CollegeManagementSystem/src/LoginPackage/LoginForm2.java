@@ -208,7 +208,7 @@ public class LoginForm2 extends JFrame
         JOptionPane.showMessageDialog(null, "Password must be entered");
       } else if (function.login(indexOfSelectedIteam, usernameField, passwordField).booleanValue()) {
         MainFrame window = new MainFrame();
-       window.frame.setVisible(true);
+       window.frmCollegeManagementSystem.setVisible(true);
         if (checkBox.isSelected()) {
           int index = comboBox.getSelectedIndex();
           String username = usernameField.getText();
