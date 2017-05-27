@@ -83,9 +83,9 @@ public class MainFrame {
 		panel.add(panel_1, gbc_panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[] { 0, 0 };
-		gbl_panel_1.rowHeights = new int[] { 0, 0, 0, 0, 0 };
+		gbl_panel_1.rowHeights = new int[] { 0, 0, 0, 0, 0, 0 };
 		gbl_panel_1.columnWeights = new double[] { 0.0, Double.MIN_VALUE };
-		gbl_panel_1.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gbl_panel_1.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		panel_1.setLayout(gbl_panel_1);
 
 		JLabel lblAtten = new JLabel("OVERVIEW");
@@ -138,6 +138,14 @@ public class MainFrame {
 		gbc_lblTeachers.gridx = 0;
 		gbc_lblTeachers.gridy = 3;
 		panel_1.add(lblTeachers, gbc_lblTeachers);
+		
+		///HTMl tag here
+		JLabel lblNewLabel = new JLabel();
+		lblNewLabel.setText("<HTML>Mausam:<Br></HTMl>");
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 4;
+		panel_1.add(lblNewLabel, gbc_lblNewLabel);
 	}
 
 }
