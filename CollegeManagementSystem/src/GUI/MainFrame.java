@@ -89,19 +89,20 @@ public class MainFrame {
 		panel_1.setLayout(gbl_panel_1);
 
 		JLabel lblAtten = new JLabel("OVERVIEW");
+		lblAtten.setIconTextGap(13);
 		lblAtten.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Home_16px.png")));
 		lblAtten.setHorizontalAlignment(SwingConstants.LEFT);
 		lblAtten.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAtten.setForeground(Color.WHITE);
 		GridBagConstraints gbc_lblAtten = new GridBagConstraints();
-		gbc_lblAtten.fill = GridBagConstraints.VERTICAL;
-		gbc_lblAtten.anchor = GridBagConstraints.WEST;
+		gbc_lblAtten.fill = GridBagConstraints.BOTH;
 		gbc_lblAtten.insets = new Insets(10, 10, 5, 0);
 		gbc_lblAtten.gridx = 0;
 		gbc_lblAtten.gridy = 0;
 		panel_1.add(lblAtten, gbc_lblAtten);
 
 		JLabel lblAttendence = new JLabel("ATTENDENCE");
+		lblAttendence.setIconTextGap(13);
 		lblAttendence.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Sheet of Paper_16px_1.png")));
 		lblAttendence.setHorizontalAlignment(SwingConstants.LEFT);
 		lblAttendence.setForeground(Color.WHITE);
@@ -113,6 +114,7 @@ public class MainFrame {
 		panel_1.add(lblAttendence, gbc_lblAttendence);
 
 		JLabel lblStudents = new JLabel("STUDENTS");
+		lblStudents.setIconTextGap(13);
 		lblStudents.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Student Male_16px.png")));
 		lblStudents.setHorizontalAlignment(SwingConstants.LEFT);
 		lblStudents.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -125,6 +127,7 @@ public class MainFrame {
 		panel_1.add(lblStudents, gbc_lblStudents);
 		
 		JLabel lblTeachers = new JLabel("TEACHERS");
+		lblTeachers.setIconTextGap(13);
 		lblTeachers.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Singing Teacher_16px.png")));
 		lblTeachers.setHorizontalAlignment(SwingConstants.LEFT);
 		lblTeachers.setForeground(Color.WHITE);
