@@ -64,6 +64,7 @@ public class LoginForm2 extends JFrame
   public LoginForm2()
   {
 	  // this is logiform2 constructor
+	  // next line
     function = new AllMethod();
     pref = Preferences.userRoot().node("RememberMe");
     try {
@@ -196,6 +197,7 @@ public class LoginForm2 extends JFrame
     });
   }
   
+  // validation for GUI login fields
   private void validationOfEntry(JComboBox comboBox) {
     indexOfSelectedIteam = comboBox.getSelectedIndex();
     
