@@ -19,6 +19,8 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
+
+import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
@@ -86,9 +88,9 @@ public class MainFrame {
 		gbc_panel_1.gridy = 0;
 		panel.add(panel_1, gbc_panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
-		gbl_panel_1.columnWidths = new int[] { 0, 0 };
+		gbl_panel_1.columnWidths = new int[] { 0, 0, 0 };
 		gbl_panel_1.rowHeights = new int[] { 0, 0, 0, 0, 0, 0 };
-		gbl_panel_1.columnWeights = new double[] { 0.0, Double.MIN_VALUE };
+		gbl_panel_1.columnWeights = new double[] { 0.0, 0.0, Double.MIN_VALUE };
 		gbl_panel_1.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		panel_1.setLayout(gbl_panel_1);
 
@@ -101,18 +103,58 @@ public class MainFrame {
 		lblAtten.setForeground(Color.WHITE);
 		GridBagConstraints gbc_lblAtten = new GridBagConstraints();
 		gbc_lblAtten.fill = GridBagConstraints.BOTH;
-		gbc_lblAtten.insets = new Insets(10, 10, 5, 0);
+		gbc_lblAtten.insets = new Insets(10, 10, 5, 5);
 		gbc_lblAtten.gridx = 0;
 		gbc_lblAtten.gridy = 0;
 		panel_1.add(lblAtten, gbc_lblAtten);
-		
+
 		lblAtten.addMouseListener(new MouseAdapter() {
 
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+				lblAtten.setBorder(new CompoundBorder(lblAtten.getBorder(), new LineBorder(Color.WHITE)));
 			}
-			
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				lblAtten.setBorder(new EmptyBorder(10, 10, 10, 10));
+			}
+
+		});
+
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(0, 128, 128));
+		GridBagConstraints gbc_panel_2 = new GridBagConstraints();
+		gbc_panel_2.anchor = GridBagConstraints.WEST;
+		gbc_panel_2.insets = new Insets(0, 0, 5, 0);
+		gbc_panel_2.fill = GridBagConstraints.VERTICAL;
+		gbc_panel_2.gridx = 1;
+		gbc_panel_2.gridy = 0;
+		panel_1.add(panel_2, gbc_panel_2);
+		panel_2.setLayout(new BorderLayout(0, 0));
+
+		JLabel lblOverview = new JLabel("OVERVIEW");
+		lblOverview.setBorder(new EmptyBorder(10, 10, 10, 10));
+		lblOverview.setIcon(new ImageIcon(MainFrame.class.getResource("/Icons/icon/Home_16px.png")));
+		lblOverview.setForeground(Color.WHITE);
+		lblOverview.setIconTextGap(13);
+		lblOverview.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_2.add(lblOverview, BorderLayout.CENTER);
+		lblOverview.addMouseListener(new MouseAdapter() {
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				panel_2.setBorder(new LineBorder(Color.WHITE));
+				//int red = Color.parseColor("#FF0000");
+				lblOverview.setForeground(new Color(198, 188, 188));
+				}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				lblOverview.setForeground(Color.WHITE);
+				panel_2.setBorder(new EmptyBorder(10, 10, 10, 10));
+			}
+
 		});
 
 		JLabel lblAttendence = new JLabel("ATTENDENCE");
@@ -123,10 +165,20 @@ public class MainFrame {
 		lblAttendence.setForeground(Color.WHITE);
 		lblAttendence.setFont(new Font("Tahoma", Font.BOLD, 14));
 		GridBagConstraints gbc_lblAttendence = new GridBagConstraints();
-		gbc_lblAttendence.insets = new Insets(10, 10, 5, 0);
+		gbc_lblAttendence.insets = new Insets(10, 10, 5, 5);
 		gbc_lblAttendence.gridx = 0;
 		gbc_lblAttendence.gridy = 1;
 		panel_1.add(lblAttendence, gbc_lblAttendence);
+		
+		lblAttendence.addMouseListener(new MouseAdapter() {
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				System.out.println(lblAttendence.getSize());
+				lblAttendence.setBorder(new LineBorder(Color.WHITE));
+			}
+			
+		});
 
 		JLabel lblStudents = new JLabel("STUDENTS");
 		lblStudents.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -137,11 +189,11 @@ public class MainFrame {
 		lblStudents.setForeground(Color.WHITE);
 		GridBagConstraints gbc_lblStudents = new GridBagConstraints();
 		gbc_lblStudents.anchor = GridBagConstraints.WEST;
-		gbc_lblStudents.insets = new Insets(10, 10, 5, 0);
+		gbc_lblStudents.insets = new Insets(10, 10, 5, 5);
 		gbc_lblStudents.gridx = 0;
 		gbc_lblStudents.gridy = 2;
 		panel_1.add(lblStudents, gbc_lblStudents);
-		
+
 		JLabel lblTeachers = new JLabel("TEACHERS");
 		lblTeachers.setBorder(new EmptyBorder(10, 10, 10, 10));
 		lblTeachers.setIconTextGap(13);
@@ -151,7 +203,7 @@ public class MainFrame {
 		lblTeachers.setFont(new Font("Tahoma", Font.BOLD, 14));
 		GridBagConstraints gbc_lblTeachers = new GridBagConstraints();
 		gbc_lblTeachers.anchor = GridBagConstraints.WEST;
-		gbc_lblTeachers.insets = new Insets(10, 10, 5, 0);
+		gbc_lblTeachers.insets = new Insets(10, 10, 5, 5);
 		gbc_lblTeachers.gridx = 0;
 		gbc_lblTeachers.gridy = 3;
 		panel_1.add(lblTeachers, gbc_lblTeachers);

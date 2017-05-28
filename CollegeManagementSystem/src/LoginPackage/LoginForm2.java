@@ -147,12 +147,17 @@ public class LoginForm2 extends JFrame
     panel.add(passwordField);
     
 
-    String uname = pref.get("username", "");
-    String password = pref.get("password", "");
-    String index = pref.get("indexx", "");
-    usernameField.setText(uname);
-    passwordField.setText(password);
-    comboBox.setSelectedIndex(Integer.parseInt(index));
+    try {
+		String uname = pref.get("username", "");
+		String password = pref.get("password", "");
+		String index = pref.get("indexx", "");
+		usernameField.setText(uname);
+		passwordField.setText(password);
+		comboBox.setSelectedIndex(Integer.parseInt(index));
+	} catch (NumberFormatException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
     
     final JLabel clearLabel = new JLabel("clear");
     clearLabel.setBorder(null);
